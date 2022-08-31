@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    background-color: #e5f4e6;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 20px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: space-between;
+}
+nav h1 {
+    margin: 10px;
+    color: rgb(84, 81, 81);
+}
+nav h2 {
+    color: rgb(59, 120, 120);
+    font-weight: 900;
+    letter-spacing: 1.8px;
+    font-size: 30px;
+    font-style:italic;
+}
+nav h2 span {
+    color: rgb(4, 74, 74);
+}
+.box {
+    background-color: aqua;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3); /* 4px for d offset, 5px for the blur, rgba(0, 0, 0, 0.3) for the color(0.3 is the alpha value) */
+    transform: translateX(400%); /*the higher the figure, it moves to the box outta the screen 2 d right*/
+    transition: transform 0.7s ease;/*adding a transition to the transform property*/
+}
+.box:nth-of-type(even) {
+    transform: translateX(-400%); /*negative values moves the box to the left*/
+}
+.box.show {
+    transform: translateX(0);
+}
+.box h2 {
+    font-size: 45px;
+}
