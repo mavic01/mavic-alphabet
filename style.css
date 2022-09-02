@@ -42,15 +42,25 @@ nav h2 span {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3); /* 4px for d offset, 5px for the blur, rgba(0, 0, 0, 0.3) for the color(0.3 is the alpha value) */
-    transform: translateX(400%); /*the higher the figure, it moves to the box outta the screen 2 d right*/
-    transition: transform 0.7s ease;/*adding a transition to the transform property*/
+    transform: translateX(100vw); /*the higher the figure, it moves to the box outta the screen 2 d right*/
+    transition: transform 1.3s ease;/*adding a transition to the transform property*/
 }
 .box:nth-of-type(even) {
-    transform: translateX(-400%); /*negative values moves the box to the left*/
+    transform: translateX(-100vw); /*negative values moves the box to the left*/
 }
 .box.show {
     transform: translateX(0);
 }
 .box h2 {
     font-size: 45px;
+}
+
+@media screen and (max-width: 480px){
+    .box {
+        width: 230px;
+        height: 130px;
+    }
+    .box h2 {
+        font-size: 35px;
+    }
 }
